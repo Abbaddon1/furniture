@@ -1,0 +1,686 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  position: relative;
+}
+
+.wrapper {
+  max-width: 1376px;
+  margin: 0 auto;
+  color: #212529;
+  padding: 10px 10px 0px 10px;
+}
+
+ul, li, a, p {
+  color: #212529;
+}
+
+.footer__container p, .title__container p, .reviews__text, .card__text, .steps__subtitle__text p, .subtitle__main, .about__subtitle__bot p, .about__subtitle__top {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.header__menu__container a, .header__menu__container li, .hero__title__text__container a {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.hero__left__content p {
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.burger__link__container, .title__container h2, .reviews__name, .reviews h2, .projects h2, .steps__subtitle__text h3, .about__subtitle__bot h3 {
+  font-family: Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 41px;
+}
+
+.steps__title__container h2, .about__title__container h2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 55px;
+}
+
+.hero__title__text__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 40px;
+}
+.hero__title__text__container h1 {
+  max-width: 794px;
+  font-family: Helvetica, sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 76px;
+  text-transform: uppercase;
+}
+.hero__title__text__container a {
+  text-decoration: none;
+}
+
+.hero__main__content__container {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
+.hero__left__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero__left__content img {
+  max-width: 329px;
+  max-height: 493px;
+}
+.hero__left__content p {
+  max-width: 445px;
+}
+
+.about {
+  margin-top: 120px;
+}
+
+.about__container {
+  display: flex;
+}
+
+.about__title__container {
+  width: 50%;
+}
+.about__title__container h2 {
+  max-width: 562px;
+}
+
+.about__subtitle__container {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  max-width: 446px;
+}
+
+.about__subtitle__top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about__subtitle__bot {
+  display: flex;
+  flex-direction: column;
+  margin-top: 44px;
+  gap: 24px;
+  max-width: 146px;
+}
+.steps {
+  margin-top: 120px;
+}
+
+.steps__container {
+  display: flex;
+}
+
+.steps__title__container {
+  width: 50%;
+}
+.steps__title__container h2 {
+  max-width: 562px;
+}
+
+.steps__subtitle__container {
+  padding-top: 10px;
+  width: 50%;
+}
+
+.steps__subtitle__text {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+  border-bottom: black solid 1px;
+  padding-bottom: 24px;
+}
+.steps__subtitle__text p {
+  max-width: 329px;
+}
+
+.projects {
+  margin-top: 120px;
+}
+.projects__cards {
+  display: grid;
+  margin-top: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 20px;
+}
+
+.projects__card {
+  position: relative;
+  cursor: pointer;
+}
+
+.card__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: rgba(33, 37, 41, 0.7);
+  width: 100%;
+  height: 66px;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  animation: slide 0.5s ease;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.card__text._focus {
+  opacity: 1;
+}
+
+.reviews {
+  margin-top: 120px;
+}
+.reviews__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.reviews__card {
+  display: flex;
+  flex: 1;
+  margin-top: 32px;
+  flex-direction: column;
+  height: 327px;
+  border: #212529 solid 1px;
+  align-items: center;
+}
+.reviews__card p {
+  max-width: 365px;
+}
+.reviews__card img {
+  margin-top: 40px;
+}
+
+.reviews__name {
+  font-size: 16px;
+  margin-top: 32px;
+}
+
+.reviews__text {
+  margin-top: 32px;
+}
+
+.form {
+  display: flex;
+  margin-top: 120px;
+  justify-content: space-between;
+}
+
+.form__text__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title__container p {
+  margin-top: 32px;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 72px;
+}
+.form__input input {
+  padding: 10px;
+  border: 0;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-bottom: solid 1px #000;
+}
+.form__input button {
+  max-width: 176px;
+  height: 46px;
+  border: 0;
+  color: #fff;
+  background-color: #000;
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+.form__social {
+  display: flex;
+  margin-top: 40px;
+  gap: 8px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+  .projects__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 1100px) {
+  .hero__title__text__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+  }
+  .hero__main__content__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero__left__content {
+    align-items: center;
+  }
+  .hero__left__content img {
+    display: none;
+    max-width: 100%;
+  }
+  .hero__left__content p {
+    max-width: 60%;
+    margin-bottom: 20px;
+  }
+  .about {
+    margin-top: 50px;
+  }
+  .about__title__container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .about__title__container h2 {
+    max-width: 700px;
+  }
+  .about__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .about__subtitle__container {
+    align-items: center;
+    max-width: 650px;
+  }
+  .about__subtitle__bot {
+    justify-content: center;
+    max-width: 100%;
+  }
+  .steps {
+    margin-top: 50px;
+  }
+  .steps__title__container {
+    text-align: center;
+  }
+  .steps__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subtitle__main {
+    text-align: center;
+  }
+  .steps__subtitle__container {
+    width: 700px;
+  }
+  .steps__subtitle__text {
+    gap: 20px;
+  }
+  .projects {
+    margin-top: 50px;
+  }
+  .projects h2 {
+    text-align: center;
+  }
+  .projects__cards {
+    max-width: 70%;
+    align-items: center;
+    margin: 20px auto;
+  }
+  .projects__cards img {
+    width: 100%;
+  }
+  .reviews {
+    margin-top: 20px;
+  }
+  .reviews h2 {
+    text-align: center;
+  }
+  .reviews__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .reviews__card {
+    padding: 0 100px 20px 100px;
+    margin: 20px auto;
+  }
+  .form {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero__title__text__container {
+    gap: 20px;
+    align-items: start;
+  }
+  .hero__title__text__container h1 {
+    font-size: 32px;
+    text-align: start;
+    width: 100%;
+    line-height: 38px;
+  }
+  .hero__main__content__container {
+    text-align: start;
+    margin-top: 20px;
+  }
+  .hero__left__content p {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .hero__right__content img {
+    max-width: 100%;
+  }
+  .about__title__container h2 {
+    text-align: start;
+    font-size: 28px;
+  }
+  .about__container {
+    text-align: start;
+  }
+  .about__subtitle__container {
+    align-items: start;
+  }
+  .steps__title__container {
+    text-align: start;
+    width: 100%;
+  }
+  .steps__title__container h2 {
+    font-size: 28px;
+  }
+  .steps__container {
+    align-items: start;
+  }
+  .subtitle__main {
+    text-align: start;
+  }
+  .steps__subtitle__container {
+    width: 100%;
+  }
+  .steps__subtitle__container p {
+    text-align: start;
+  }
+  .steps__subtitle__text {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .steps__subtitle__text p {
+    max-width: 100%;
+  }
+  .projects h2 {
+    text-align: start;
+  }
+  .projects__cards {
+    grid-template-columns: 1fr;
+  }
+  .reviews {
+    margin-top: 20px;
+  }
+  .reviews h2 {
+    text-align: center;
+  }
+  .reviews__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .reviews__card {
+    padding: 0 0 20px 0;
+    margin: 20px auto;
+  }
+  .form__img__container img {
+    max-width: 100%;
+  }
+}
+.footer__container p, .about__subtitle__top, .about__subtitle__bot p, .subtitle__main, .steps__subtitle__text p, .card__text, .reviews__text, .title__container p {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.header__menu__container a, .header__menu__container li, .hero__title__text__container a {
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.hero__left__content p {
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.burger__link__container, .about__subtitle__bot h3, .steps__subtitle__text h3, .projects h2, .reviews h2, .reviews__name, .title__container h2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 41px;
+}
+
+.about__title__container h2, .steps__title__container h2 {
+  font-family: Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 55px;
+}
+
+.burger__menu {
+  display: none;
+  position: relative;
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+}
+
+.burger__menu span {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  height: 10%;
+  background-color: #000000;
+  top: 50%;
+  transform: scale(1) translateY(-50%);
+}
+.burger__menu span::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: 20px;
+  background-color: #000;
+}
+.burger__menu span::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: "";
+  bottom: 20px;
+  background-color: #000;
+}
+
+.burger__link__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 100px;
+  z-index: 1;
+  transform: translateY(-100%);
+  background-color: rgba(0, 0, 0, 0.9);
+  min-width: 100%;
+  min-height: 100%;
+  gap: 30px;
+  transition: all 0.3s ease 0s;
+}
+.burger__link__container a {
+  color: white;
+  position: relative;
+  text-decoration: none;
+}
+
+.burger__link__container._active {
+  transform: translateY(0);
+}
+
+.burger__link__container._active {
+  transform: translateY(0);
+}
+
+.burger__menu._active span {
+  background-color: #fff;
+}
+.burger__menu._active span::before {
+  background-color: #fff;
+}
+.burger__menu._active span::after {
+  background-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.header__menu__container {
+  display: flex;
+}
+.header__menu__container ul {
+  padding-right: 207px;
+}
+.header__menu__container li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.header__menu__container a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .burger__menu {
+    display: block;
+  }
+  .header__menu,
+  .tel {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .burger__menu {
+    width: 50px;
+    height: 50px;
+  }
+}
+.footer__container p, .about__subtitle__top, .about__subtitle__bot p, .subtitle__main, .steps__subtitle__text p, .card__text, .reviews__text, .title__container p {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 120px;
+  padding-bottom: 20px;
+}
+.footer__right {
+  display: flex;
+  gap: 30px;
+}
+.footer__right a {
+  text-decoration: none;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1100px) {
+  .footer__right {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+body._lock {
+  overflow: hidden;
+}/*# sourceMappingURL=main.css.map */

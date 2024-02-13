@@ -1,0 +1,58 @@
+// & - добавит класс, который выше указан
+
+// body {
+//     background-color: red;
+//     &:hover { - подставит боди ховер
+//         color: black;
+//     }
+// }
+
+
+
+// $ - создание переменной туда можно вложить классы шрифты и тд
+// $top-color: red;
+
+//% - создание рядо свойств и если мы укажем это к какому-то классу с повторением
+//то повторяться не будет то, что уже есть
+
+// %item{
+//     margin-top: 20px;
+//     font-size: 20px;
+//     font-family: 'Courier New', Courier, monospace;
+// }
+
+// .name1 {
+//     color: black;
+//     @extend %item;
+// }
+
+// .name2 {
+//     color: red;
+//     @extend %item;
+// }
+
+// .name3 {
+//     color: white;
+//     @extend %item;
+// }
+
+
+// результат:
+
+// .name3, .name2, .name1 {
+//     margin-top: 20px;
+//     font-size: 20px;
+//     font-family: "Courier New", Courier, monospace;
+//   }
+  
+//   .name1 {
+//     color: black;
+//   }
+  
+//   .name2 {
+//     color: red;
+//   }
+  
+//   .name3 {
+//     color: white;
+//   }
